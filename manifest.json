@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+  "name": "Website Lock",
+  "version": "1.0",
+  "description": "Lock websites with a PIN",
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["activeTab", "storage"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
